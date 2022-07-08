@@ -5,6 +5,10 @@ const List = (props) => {
     <>
       {props.person.map((person) => {
         const { id, name, age, image } = person;  /** we can destructure the json data like this .*/
+
+        /*
+         * return the in arrow function
+         */
         return (
           <div key={person.id} className='person'>
             <img src={person.image} alt={person.name}></img>
