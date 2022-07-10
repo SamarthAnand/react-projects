@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Loading from './Loading'
+import Review from './Review';
 import Tours from './Tours'
 
 const url = 'https://course-api.com/react-tours-project'
@@ -41,12 +42,13 @@ function App() {
       <button className='delete-btn' onClick={() => { fetchData() }}>
         Refresh
       </button>
+      <Review />
     </div>
 
   </main> :
     <main>
       <Tours tours={tours} removeTours={removeTours} />
-
+      <Review />
     </main>
   );
 }
