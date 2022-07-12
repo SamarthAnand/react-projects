@@ -6,6 +6,9 @@ import items from './data';
 const allCategory = ['all', ...new Set(items.map((item) =>
   item.category))];
 
+/**
+ * the above function makes an array of items that contains a set of values.
+ */
 function App() {
   const [menuItems, setMenuItems] = useState(items);
   const [categoreis, setCategoreis] = useState(allCategory);
